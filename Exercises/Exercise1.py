@@ -11,6 +11,7 @@ def percent_decimal(i):
         return i/100
 
 def exponent(integer, power):
+    ans = 1
     if integer == 0 and power == 0:
         return 1
     elif integer == 0:
@@ -18,8 +19,8 @@ def exponent(integer, power):
     elif integer > 0 and power == 0:
         return 1
     elif integer > 0 and power > 0:
-        for power in range(power + 1):
-            ans = integer ** power
+        for i in range(power):
+            ans = integer * ans
         return ans
 
 def complement(dna):
@@ -40,7 +41,7 @@ def complement(dna):
 hello();
 ans = percent_decimal(0.45)
 print(ans)
-expans = exponent(4,3)
+expans = exponent(3,2)
 print(expans)
 compans = complement("CTAGCGT")
 print(compans)
