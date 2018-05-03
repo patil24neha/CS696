@@ -35,7 +35,7 @@ class Gens:
 
     value = 0;
 
-    def __init__(self, start):
+    def __init__(self, start=1):
         self.start = start
         self.n1 = 1
         self.n2 = 1
